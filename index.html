@@ -1,27 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <title>Toyota</title>
+    <title>Toyota - Siempre Mejor</title>
 </head>
 
 <body>
-    <header>
+    <header class="main-header">
         <div class="logo">
-            <img src="img/toyota.png" alt="">
             <a href="index.html">
-        </a>
+                <img src="img/toyota.png" alt="Toyota Logo">
+            </a>
         </div>
-        
+
         <nav class="lateral">
-            <a class="menu" href="menu">Sobre Toyota</a>
-            <a class="menu" href="menu">Modelos</a>
-            <a class="menu" href="menu">Novedades</a>
-            <a class="menu" href="menu">Contacto</a>
+            <a class="menu" href="sobre-toyota.html">Sobre Toyota</a>
+            <a class="menu" href="modelos.html">Modelos</a>
+            <a class="menu" href="novedades.html">Novedades</a>
+            <a class="menu" href="contacto.html">Contacto</a>
         </nav>
     </header>
 
@@ -33,19 +33,73 @@
                         <img src="" alt="">
                 </div>
     </div>
-    <section class="home">
-        <header>
-            <h3>Campos del body</h3>
-        </header>
-        <article>
 
-        </article>
-        <footer>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Let's Go Places</h1>
+                <p>Descubre la innovación, calidad y fiabilidad que nos definen. Liderando el camino hacia el futuro de
+                    la movilidad.</p>
+                <a href="modelos.html" class="btn-primary">Descubrir Modelos</a>
+            </div>
+        </section>
 
-        </footer>
-    </section>
-    <footer>
+        <!-- Information Section -->
+        <section class="corporate-info">
+            <div class="container">
+                <h2>Nuestra Filosofía</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>Calidad</h3>
+                        <p>Nos comprometemos a ofrecer vehículos seguros, fiables y de la más alta calidad para nuestros
+                            clientes en todo el mundo.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Innovación</h3>
+                        <p>Pioneros en tecnología híbrida y comprometidos con el desarrollo de soluciones de movilidad
+                            sostenible.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Mejora Continua</h3>
+                        <p>Aplicamos el principio de 'Kaizen' en cada aspecto de nuestra organización para superar
+                            siempre las expectativas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
+    <!-- Footer Section -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-contact">
+                <h3>Contacto</h3>
+                <p><strong>Dirección:</strong> Av. de la Institución Libre de Enseñanza, 43, 28037 Madrid, España</p>
+                <p><strong>Teléfono:</strong> +34 900 822 002</p>
+                <p><strong>Email:</strong> clientes@toyota.es</p>
+            </div>
+            <div class="footer-links">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="sobre-toyota.html">Sobre Nosotros</a></li>
+                    <li><a href="modelos.html">Gama de Vehículos</a></li>
+                    <li><a href="novedades.html">Noticias</a></li>
+                    <li><a href="contacto.html">Atención al Cliente</a></li>
+                </ul>
+            </div>
+            <div class="footer-map">
+                <h3>Encuéntranos</h3>
+                <!-- Generic Google Maps iframe for demonstration -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.568478411603!2d-3.6335193241512415!3d40.43615297143714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422f0ae2763e15%3A0x6d8f28c5a61d1e43!2sToyota%20Espa%C3%B1a!5e0!3m2!1ses!2ses!4v1714820000000!5m2!1ses!2ses"
+                    width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Toyota. Todos los derechos reservados.</p>
+        </div>
     </footer>
 
 </body>

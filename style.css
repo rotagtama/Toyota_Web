@@ -133,10 +133,11 @@ body {
     left: 55%;
     position: absolute;
     transform: translate(50%, -50%);
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.3) 0.5%, transparent 50%), url(img/fondoaside.jpeg);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.3) 0.5%, transparent 30%), url(img/fondoaside.jpeg);
     background-attachment: fixed;
     background-position: center;
     background-size: 100%;
+    box-shadow: 10px 50px black inset;
 }
 
 .carretera,
@@ -151,11 +152,11 @@ body {
 
 .coche img {
     z-index: 50px;
-    width: 500px;
+    width: 550px;
     position: absolute;
-    left: -270px;
-    top: 120px;
-    transform: rotateY(-20deg) rotateX(5deg) rotateZ(6deg);
+    left: -290px;
+    top: 115px;
+    transform: rotateY(20deg) rotateX(5deg) rotateZ(-3deg);
 }
 
 .carretera img {
@@ -174,7 +175,8 @@ body {
 
 .container {
     max-width: 1200px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    margin-right: 50px;
 }
 
 .corporate-info h2 {

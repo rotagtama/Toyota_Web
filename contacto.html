@@ -25,29 +25,101 @@
         </nav>
     </header>
 
-     <form class="formulario">
-        <h1>Contáctanos</h1>
-        <div class="contenedor">
-            <div class="input-contenedor">
-                <img class="icon" src="icons/user.png">
-                <input type="text" placeholder="Nombre de usuario">
-            </div>
-            <div class="input-contenedor">
-                <img class="icon" src="icons/mail.png">
-                <input type="text" placeholder="Correo Electrónico">
-            </div>
-            <div class="input-contenedor">
-                <img class="icon" src="icons/pssword.png">
-                <input type="password" placeholder="Contraseña">
-            </div>
-            <input type="submit" value="Registro" class="button">
-            <p>Al registrarse, acepta nuestras condiciones de uso y política de privacidad</p>
-            <p>¿Ya tienes una cuenta?<a class="link" href="login.html">Iniciar sesión</a></p>
+    <div class="contact-page-wrapper">
+        <div class="contact-page-header">
+            <h1>Contáctanos</h1>
+            <p>Para contactarnos por favor rellena este sencillo formulario y no olvides explicar el motivo antes de
+                darle al botón de "Enviar". En breve nos pondremos en contacto contigo para hacer un oportuno
+                seguimiento de tu caso.</p>
         </div>
-    </form>
+
+        <form class="contact-form-box">
+            <div class="form-box-header">
+                <h2>Solicita cita</h2>
+                <span class="required-text">* *Campos Obligatorios</span>
+            </div>
+
+            <div class="form-box-body">
+                <div class="form-column">
+                    <div class="form-group-row">
+                        <label>Nombre <span>*</span></label>
+                        <div class="input-wrapper">
+                            <input type="text" required>
+                            <span class="input-icon">👤</span>
+                        </div>
+                    </div>
+                    <div class="form-group-row">
+                        <label>Apellido <span>*</span></label>
+                        <div class="input-wrapper">
+                            <input type="text" required>
+                            <span class="input-icon">👤</span>
+                        </div>
+                    </div>
+                    <div class="form-group-row">
+                        <label>E-Mail <span>*</span></label>
+                        <div class="input-wrapper">
+                            <input type="email" required>
+                            <span class="input-icon">✉️</span>
+                        </div>
+                    </div>
+                    <div class="form-group-row">
+                        <label>Localización <span>*</span></label>
+                        <div class="input-wrapper">
+                            <select required>
+                                <option value="" disabled selected>Selecciona uno</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-column">
+                    <div class="form-group-row">
+                        <label>Código Postal <span>*</span></label>
+                        <div class="input-wrapper">
+                            <input type="text" required>
+                        </div>
+                    </div>
+                    <div class="form-group-row">
+                        <label>Ciudad <span>*</span></label>
+                        <div class="input-wrapper">
+                            <input type="text" required>
+                        </div>
+                    </div>
+                    <div class="form-group-row phone-row">
+                        <label>Teléfono <span>*</span></label>
+                        <div class="input-wrapper">
+                            <input type="tel" required>
+                            <span class="input-icon">📞</span>
+                        </div>
+                        <small class="phone-hint">Incluya el prefijo sin el "34" seguido por el número de
+                            teléfono</small>
+                    </div>
+                    <div class="form-group-row">
+                        <label>Departamento <span>*</span></label>
+                        <div class="input-wrapper">
+                            <select required>
+                                <option value="" disabled selected>Selecciona uno</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group-row full-width-row">
+                    <label>Comentarios</label>
+                    <div class="input-wrapper">
+                        <textarea rows="4"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-box-footer">
+                <button type="submit" class="btn-submit">Enviar</button>
+            </div>
+        </form>
+    </div>
 
 
-     <!-- Footer Section -->
+    <!-- Footer Section -->
     <footer class="main-footer">
         <div class="footer-container">
             <div class="footer-contact">

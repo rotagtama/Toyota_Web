@@ -19,10 +19,34 @@
         </div>
 
         <nav class="lateral">
-            <a class="menu" href="toyota.html">Sobre Toyota</a>
-            <a class="menu" href="modelos.html">Modelos</a>
-            <a class="menu" href="novedades.html">Novedades</a>
-            <a class="menu" href="contacto.html">Contacto</a>
+            <div class="nav-item">
+                <a class="menu" href="toyota.html">Sobre Toyota</a>
+                <div class="dropdown">
+                    <a href="#">Historia</a>
+                    <a href="#">Filosofía</a>
+                    <a href="#">Sostenibilidad</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a class="menu" href="modelos.html">Modelos</a>
+                <div class="dropdown">
+                    <a href="#">Híbridos</a>
+                    <a href="#">SUVs</a>
+                    <a href="#">Camionetas</a>
+                    <a href="#">Sedanes</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a class="menu" href="novedades.html">Novedades</a>
+                <div class="dropdown">
+                    <a href="#">Noticias</a>
+                    <a href="#">Eventos</a>
+                    <a href="#">Promociones</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a class="menu" href="contacto.html">Contacto</a>
+            </div>
         </nav>
     </header>
 
@@ -37,7 +61,10 @@
             </div>
             <div class="hero-imagen-coche">
                 <div class="coche-destacado">
-                    <img src="img/toyotafoto.webp" alt="Toyota Destacado">
+                    <picture>
+                        <source srcset="img/fondo_responsive.png" media="(max-width: 768px)">
+                        <img src="img/toyotafoto.webp" alt="Toyota Destacado">
+                    </picture>
                 </div>
                 <div class="estelas-luz"></div>
             </div>
@@ -89,29 +116,29 @@
                             <div class="item-beneficio">
                                 <div class="icono"><img src="" alt="icono"> </div>
                                 <div class="texto">
-                                    <h3>Tecnología Avanzada</h3>
-                                    <p>Innovación líder en el sector automotriz.</p>
+                                    <h3>Hybrid Synergy Drive</h3>
+                                    <p>Líderes en tecnología híbrida con más de 25 años de experiencia.</p>
                                 </div>
                             </div>
                             <div class="item-beneficio">
                                 <div class="icono"><img src="" alt="icono"></div>
                                 <div class="texto">
-                                    <h3>Seguridad de Primera</h3>
-                                    <p>Sistemas inteligentes de asistencia al conductor.</p>
+                                    <h3>Toyota Safety Sense</h3>
+                                    <p>Seguridad activa avanzada de serie en toda nuestra gama.</p>
                                 </div>
                             </div>
                             <div class="item-beneficio">
                                 <div class="icono"><img src="" alt="icono"></div>
                                 <div class="texto">
-                                    <h3>Eficiencia de Combustible</h3>
-                                    <p>Compromiso con la movilidad sostenible.</p>
+                                    <h3>Movilidad Sostenible</h3>
+                                    <p>Compromiso "Beyond Zero" para un futuro sin emisiones.</p>
                                 </div>
                             </div>
                             <div class="item-beneficio">
                                 <div class="icono"><img src="" alt="icono"></div>
                                 <div class="texto">
-                                    <h3>Servicio Confiable</h3>
-                                    <p>Mantenimiento oficial con técnicos expertos.</p>
+                                    <h3>Garantía Toyota Relax</h3>
+                                    <p>Hasta 15 años de tranquilidad con cada mantenimiento oficial.</p>
                                 </div>
                             </div>
                         </div>

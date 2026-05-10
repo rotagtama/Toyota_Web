@@ -16,56 +16,7 @@ body {
     line-height: 1.6;
 }
 
-/* Header & Nav */
-.main-header {
-    width: 100%;
-    height: 70px;
-    background-color: #1a1a1a;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    padding: 0 20px;
-}
-
-.logo img {
-    height: 50px;
-    width: auto;
-    transition: transform 0.3s ease;
-}
-
-.logo img:hover {
-    transform: scale(1.05);
-}
-
-.lateral {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    padding-right: 20px;
-}
-
-.menu {
-    color: #ffffff;
-    text-decoration: none;
-    padding: 0 20px;
-    font-weight: 500;
-    font-size: 16px;
-    transition: color 0.3s ease;
-}
-
-.menu:hover {
-    color: #EB0A1E;
-}
+/* El encabezado y la navegación se heredan de style.css para mantener la consistencia */
 
 /* Formulario Página de Contacto */
 .envoltura-pagina-contacto {
@@ -100,16 +51,20 @@ body {
 .header-caja-formulario {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; /* Centrado vertical */
     border-bottom: 1px solid #eee;
-    padding-bottom: 15px;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    min-height: 60px;
 }
 
 .header-caja-formulario h2 {
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: #666;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    margin-top: 5px; /* Bajamos un poco el título */
 }
 
 .texto-requerido {
@@ -135,12 +90,14 @@ body {
 .fila-grupo-formulario {
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 .fila-grupo-formulario label {
-    flex: 0 0 120px;
-    font-size: 1rem;
-    color: #666;
+    flex: 0 0 140px; /* Ancho fijo para etiquetas para alineación perfecta */
+    font-size: 0.95rem;
+    color: #444;
+    font-weight: 500;
 }
 
 .fila-grupo-formulario label span {
@@ -152,82 +109,75 @@ body {
     position: relative;
     display: flex;
     align-items: center;
+    min-height: 42px;
 }
 
 .envoltura-entrada input,
 .envoltura-entrada select,
 .envoltura-entrada textarea {
     width: 100%;
-    padding: 8px 12px;
-    border: 1px solid #ccc;
+    height: 42px; /* Tamaño estandarizado */
+    padding: 0 12px;
+    border: 1px solid #ddd;
     outline: none;
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-family: inherit;
     color: #333;
-    transition: border-color 0.3s;
+    transition: all 0.3s;
+    background-color: #fff;
+}
+
+.envoltura-entrada textarea {
+    height: auto;
+    padding: 12px;
+    min-height: 100px;
 }
 
 .envoltura-entrada input:focus,
 .envoltura-entrada select:focus,
 .envoltura-entrada textarea:focus {
     border-color: #EB0A1E;
+    box-shadow: 0 0 0 3px rgba(235, 10, 30, 0.1);
 }
 
 .icono-entrada {
     position: absolute;
-    right: 1px;
-    top: 1px;
-    bottom: 1px;
-    width: 35px;
-    background: #f4f4f4;
-    border-left: 1px solid #ccc;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #888;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.icono-entrada img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    opacity: 0.7;
 }
 
 .envoltura-entrada input[type="text"],
 .envoltura-entrada input[type="email"],
 .envoltura-entrada input[type="tel"] {
-    padding-right: 40px; /* Make room for icon if it exists */
-}
-
-/* Remove padding if no icon (CSS trick: we added icon explicitly, so no general rule needed, but for simplicity we rely on the specific classes where we added icons) */
-.columna-formulario:nth-child(2) .fila-grupo-formulario:not(.fila-telefono) .envoltura-entrada input {
-    padding-right: 12px; /* overwrite for the ones without icons */
+    padding-right: 40px;
 }
 
 .fila-telefono {
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.fila-telefono .envoltura-entrada {
-    width: 100%;
-}
-
-.fila-telefono label {
-    margin-bottom: 5px;
-}
-
-.fila-telefono .envoltura-entrada {
-    display: flex;
-    margin-left: 120px;
-    width: calc(100% - 120px);
-}
-
-/* Special fix to align label properly on the left and input on the right for phone */
-.fila-telefono {
-    flex-direction: row;
+    position: relative;
     flex-wrap: wrap;
 }
+
 .pista-telefono {
-    margin-left: 120px;
-    width: calc(100% - 120px);
+    margin-left: 140px; /* Debe coincidir con el flex-basis del label */
     font-size: 0.75rem;
     color: #999;
-    margin-top: 4px;
+    margin-top: 5px;
+    width: 100%;
 }
 
 .fila-ancho-completo {
@@ -330,4 +280,60 @@ body {
     padding: 20px;
     font-size: 0.8rem;
     opacity: 0.6;
+}
+
+/* --- Media Queries Responsivas --- */
+
+@media (max-width: 1024px) {
+    .envoltura-pagina-contacto {
+        margin: 20px auto;
+    }
+
+    .caja-formulario-contacto {
+        padding: 20px;
+    }
+
+    .columna-formulario {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-pagina-contacto h1 {
+        font-size: 1.6rem;
+    }
+
+    .header-caja-formulario {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .fila-grupo-formulario {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .fila-grupo-formulario label {
+        flex: none;
+        margin-bottom: 8px;
+    }
+
+    .envoltura-entrada {
+        width: 100%;
+    }
+
+    .fila-telefono .envoltura-entrada,
+    .pista-telefono {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .footer-caja-formulario {
+        justify-content: center;
+    }
+
+    .btn-enviar {
+        width: 100%;
+    }
 }

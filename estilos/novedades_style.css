@@ -6,18 +6,20 @@
 
 .news-contenedor {
     padding: 40px 20px;
+    /* Antes de poner esto me cortaba las fucking tarjetas a la mitad */
     overflow: visible;
-    /* Cambiado de hidden para permitir ver todas las noticias */
     position: relative;
+    /* Calcula el alto de este contenedor en base al viewport y restandole el tamaño del header */
     min-height: calc(100vh - 70px);
-    /* Cambiado de height para permitir crecimiento */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /* efecto asi fantasma en el centro de la pantalla con un color blanco fantasmal  */
     background: radial-gradient(circle at center, #ffffff 0%, #f0f0f0 100%);
 }
 
+/* centrado de todo */
 .envoltura-rueda {
     position: relative;
     width: 100%;
@@ -38,10 +40,12 @@
     height: auto;
     opacity: 0.15;
     z-index: 1;
+    /* opacidad de la rueda y que no tape las tarjetas de noticias */
     filter: grayscale(1);
     pointer-events: none;
 }
 
+/*Contenedor de los divs de las noticias */
 .news-cards-contenedor {
     position: relative;
     z-index: 2;
@@ -49,6 +53,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    /* Separación entre tarjetas */
     gap: 120px;
 }
 
@@ -60,13 +65,16 @@
 }
 
 .noticias-izquierda {
+    /* Alineacion de donde termina el div */
     align-items: flex-end;
 }
 
 .noticias-derecha {
+    /* Alineacion de donde inicia el div */
     align-items: flex-start;
 }
 
+/* estilo de la tarjeta de noticias */
 .tarjeta-noticia {
     background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(10px);
@@ -74,6 +82,7 @@
     padding: 35px;
     border-radius: 15px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    /* transicion del hover que por encima se mueva */
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     width: 100%;
     position: relative;
@@ -101,6 +110,7 @@
     color: #444;
 }
 
+/* color del boton de leer mas */
 .leer-mas {
     display: inline-block;
     color: #EB0A1E;
@@ -111,14 +121,15 @@
     transition: opacity 0.3s ease;
 }
 
+/* bajado de la  */
 .leer-mas:hover {
     opacity: 0.7;
 }
 
 
-/* --- Media Queries Responsivas --- */
+/* Responsive */
 
-/* Fijo >1300px */
+/* Grandes*/
 @media (min-width: 1301px) {
     .envoltura-rueda {
         max-width: 1300px;

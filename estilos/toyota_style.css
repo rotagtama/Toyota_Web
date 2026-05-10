@@ -1,12 +1,12 @@
-/* Estilos específicos para la página corporativa Toyota */
-
 .cuerpo-corporativo {
     background-color: #000000;
     color: #ffffff;
 }
 
+/* Contenedor en flexbox para facilitar la disposicion  y el centrado del logo */
 .timeline-contenedor {
     display: flex;
+    /* aqui la direccion hace que los divs se ponga en columna */
     flex-direction: column;
     align-items: center;
     position: relative;
@@ -23,6 +23,7 @@
     transform: translateX(-50%);
 }
 
+/* Esta es la division de la linea en dos partes */
 .linea-superior {
     top: 0;
     height: 40%;
@@ -41,6 +42,7 @@
     z-index: 10;
 }
 
+/* El logazo nene */
 .circulo-central {
     width: 200px;
     height: 200px;
@@ -56,6 +58,7 @@
 .circulo-central img {
     width: 120px;
     height: auto;
+    /* Esto le da el efecto de sombra y que brille un toque */
     filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
 }
 
@@ -98,9 +101,8 @@
     margin-bottom: 15px;
 }
 
-/* --- Media Queries Responsivas --- */
-
-/* Fijo >1300px */
+/* Responsive */
+/* Fijo de las pantallas grande  de mas de 1300px */
 @media (min-width: 1301px) {
     .timeline-contenedor {
         max-width: 1300px;

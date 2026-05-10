@@ -51,7 +51,6 @@
     </header>
 
     <div>
-        <!-- Sección Hero Split -->
         <section class="hero-split">
             <div class="hero-texto">
                 <h1>Let's Go Places</h1>
@@ -61,6 +60,11 @@
             </div>
             <div class="hero-imagen-coche">
                 <div class="coche-destacado">
+
+                    <!-- Buscando como ajustar la imagen del coche y la pista encontre este recurso
+                     basicamamente se precarga el componente picture con el responsive ya aplicado 
+                     en la parte de "media" y solo se muestra el que corresponda al tamaño de la pantalla,
+                     la imagen usada la edite yo para que sea igual a la de la pagina normal -->
                     <picture>
                         <source srcset="img/fondo_responsive.png" media="(max-width: 768px)">
                         <img src="img/toyotafoto.webp" alt="Toyota Destacado">
@@ -93,7 +97,7 @@
                                 <a href="#" class="btn-oferta">Ver Oferta</a>
                             </div>
                         </div>
-                        <div class="tarjeta-oferta full-width">
+                        <div class="tarjeta-oferta tamaño-normal">
                             <div class="oferta-horizontal">
                                 <img src="img/modelos/hybrido.png" alt="Corolla Cross">
                                 <div class="oferta-info">
@@ -204,7 +208,7 @@
         </section>
     </div>
 
-    <!-- Footer Section -->
+    <!-- El footer -->
     <footer class="main-footer">
         <div class="footer-contenedor">
             <div class="footer-contact">
@@ -224,11 +228,13 @@
             </div>
             <div class="footer-map">
                 <h3>Encuéntranos</h3>
-                <!-- Generic Google Maps iframe for demonstration -->
+                <!-- iframe es lo que deja importar el mapa de google maps 
+                 con la direccion, algo lei de que es por parte de la api de google pero ni idea de como funciona -->
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3080.125740523077!2d-0.4079836239121901!3d39.46014467161569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604f56f156d68b%3A0x6b8764a7c0678d38!2sToyota%20Valencia%20-%20Sakurauto!5e0!3m2!1ses!2ses!4v1715356588000!5m2!1ses!2ses"
                     width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
         </div>
         <div class="footer-bottom">

@@ -1,0 +1,174 @@
+.contenedor-galeria {
+    padding: 60px 5%;
+    background-color: #ffffff;
+    min-height: 80vh;
+}
+
+.cabecera-galeria {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.cabecera-galeria h1 {
+    font-size: 3rem;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.cabecera-galeria p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.rejilla-modelos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.tarjeta-auto {
+    background: #f9f9f9;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+    border: 1px solid #eee;
+    display: flex;
+    /* Diseño horizontal */
+    height: 320px;
+    /* Altura ajustada para acomodar contenido */
+    align-items: center;
+}
+
+.tarjeta-auto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.contenedor-imagen {
+    flex: 1.2;
+    /* Damos un poco más de prioridad al contenedor de la imagen */
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.contenedor-imagen img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    /* Prioriza ver la imagen completa */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.imagen-hover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.tarjeta-auto:hover .imagen-primaria {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.05);
+    /* Ajuste por el centrado absoluto si aplica, pero aquí mejor simplificar */
+}
+
+/* Simplificación del hover para que no se rompa con el centrado */
+.tarjeta-auto:hover .imagen-primaria {
+    opacity: 0;
+    transform: scale(1.05);
+}
+
+.tarjeta-auto:hover .imagen-hover {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.contenido-tarjeta {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 1px solid #f0f0f0;
+}
+
+.contenido-tarjeta h3 {
+    font-size: 1.6rem;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.contenido-tarjeta h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: #EB0A1E;
+}
+
+.caracteristicas {
+    list-style: none;
+    padding: 0;
+}
+
+.caracteristicas li {
+    margin-bottom: 8px;
+    color: #444;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+}
+
+.caracteristicas li::before {
+    content: '→';
+    color: #EB0A1E;
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .rejilla-modelos {
+        grid-template-columns: 1fr;
+        max-width: 900px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cabecera-galeria h1 {
+        font-size: 2.2rem;
+    }
+
+    .tarjeta-auto {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .contenedor-imagen {
+        width: 100%;
+        height: 250px;
+    }
+
+    .contenido-tarjeta {
+        border-left: none;
+        border-top: 1px solid #f0f0f0;
+    }
+}

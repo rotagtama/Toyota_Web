@@ -1,12 +1,3 @@
-:root {
-    --toyota-red: #EB0A1E;
-    --dark-bg: #1a1a1a;
-    --light-bg: #f4f4f4;
-    --text-main: #333333;
-    --text-light: #ffffff;
-    --font-family: "Corporativa", "Inter", "Roboto", sans-serif;
-}
-
 * {
     margin: 0px;
     padding: 0px;
@@ -19,18 +10,17 @@
 }
 
 body {
-    font-family: var(--font-family);
-    color: var(--text-main);
-    background-color: var(--light-bg);
+    font-family: "Corporativa", "Inter", "Roboto", sans-serif;
+    color: #333333;
+    background-color: #ffffff;
     line-height: 1.6;
-    background-color: black;
 }
 
 /* Header & Nav */
 .main-header {
     width: 100%;
     height: 70px;
-    background-color: var(--dark-bg);
+    background-color: #1a1a1a;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -65,7 +55,7 @@ body {
 }
 
 .menu {
-    color: var(--text-light);
+    color: #ffffff;
     text-decoration: none;
     padding: 0 20px;
     font-weight: 500;
@@ -74,160 +64,361 @@ body {
 }
 
 .menu:hover {
-    color: var(--toyota-red);
+    color: #EB0A1E;
 }
 
-/* Seccion Hero*/
-.hero {
+/* Sección Portada */
+/* SECCIÓN HERO SPLIT */
+.hero-split {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #ffffff;
-    color: var(--text-main);
-    padding: 80px 5%;
-    height: 100vh;
-    min-height: 60vh;
+    height: 80vh;
+    min-height: 600px;
+    background-color: #ffffff;
     overflow: hidden;
-    width: 70%;
 }
 
-.hero-content {
-    position: relative;
-    top: -160px;
-    flex: 1;
-    max-width: 800px;
-    z-index: 2;
+.hero-texto {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 8%;
+    padding-bottom: 100px;
+    /* Al empujar desde abajo, el contenido sube */
 }
 
-.hero-content h1 {
-    font-size:100px;
+.hero-texto h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    line-height: 1;
+    color: #1a1a1a;
     margin-bottom: 20px;
-    font-weight: 700;
-    line-height: 1.1;
-    color: var(--dark-bg);
 }
 
-.hero-content p {
+.hero-texto p {
     font-size: 1.2rem;
+    color: #444;
     margin-bottom: 40px;
-    color: var(--text-main);
+    max-width: 500px;
 }
 
-.btn-primary {
+.btn-primario {
     display: inline-block;
-    background-color: var(--toyota-red);
-    color: var(--text-light);
-    padding: 15px 30px;
+    background-color: #EB0A1E;
+    color: #ffffff;
+    padding: 15px 40px;
     text-decoration: none;
     font-weight: 600;
     border-radius: 4px;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    width: fit-content;
 }
 
-.btn-primary:hover {
+.btn-primario:hover {
     background-color: #cc0000;
     transform: translateY(-2px);
 }
 
-.aside {
-    width: 30%;
-    height: 80%;
-    top: 45.3%;
-    left: 55%;
-    position: absolute;
-    transform: translate(50%, -50%);
-    background: url(img/fondoaside.jpeg);
-    /* linear-gradient(to right, rgba(255, 255, 255, 0.3) 0.5%, transparent 30%),  */
-    background-attachment: fixed;
-    background-position: center;
-    background-size: 100%;
-}
-
-.carretera,
-.coche {
+.hero-imagen-coche {
+    width: 35%;
+    background-color: #000;
     position: relative;
-    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.coche-destacado {
+    z-index: 2;
+    width: 120%;
+    margin-left: -120%;
+    margin-top: 12%;
+    filter: drop-shadow(-15px 15px 30px rgba(0, 0, 0, 0.5));
+}
+
+.coche-destacado img {
     width: 100%;
-    height: 600px;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    transform: perspective(1000px) rotateY(-18deg) rotateX(3deg);
 }
 
-.coche img {
-    z-index: 50px;
-    width: 555px;
+.estelas-luz {
     position: absolute;
-    left: -290px;
-    top: 115px;
-    transform: rotateY(20deg) rotateX(5deg) rotateZ(-3deg);
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: url(img/fondoaside.jpeg) right center / cover no-repeat;
+    opacity: 1;
+    z-index: 1;
 }
 
-.carretera img {
-    z-index: 50px;
-    width: 550px;
-    position: absolute;
-    left: -110px;
-    top: 100px;
-}
-
-/* Corporate Info Section */
-.corporate-info {
+/* SECCIÓN OFERTAS Y BENEFICIOS */
+.ofertas-beneficios {
     padding: 80px 5%;
+    background-color: #f9f9f9;
+}
+
+.contenedor-dual {
+    display: flex;
+    gap: 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.bloque-ofertas {
+    flex: 2;
+}
+
+.bloque-beneficios {
+    flex: 1;
     background-color: #ffffff;
-    width: 70%;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
-.container {
-    max-width: 1200px;
-    /* margin: 0 auto; */
-    margin-right: 50px;
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: #1a1a1a;
 }
 
-.corporate-info h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 50px;
-    color: var(--dark-bg);
+h2 span {
+    color: #EB0A1E;
 }
 
-.info-grid {
+.grid-ofertas {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
-.info-card {
-    background-color: var(--light-bg);
-    padding: 40px 30px;
+.tarjeta-oferta {
+    background: #ffffff;
     border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-top: 4px solid transparent;
-    width: 400px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-oferta:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta-oferta img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.oferta-info {
+    padding: 20px;
+}
+
+.oferta-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.precio {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.btn-oferta {
+    display: inline-block;
+    background-color: #EB0A1E;
+    color: #fff;
+    padding: 8px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.full-width {
+    grid-column: span 2;
+}
+
+.oferta-horizontal {
+    display: flex;
+    align-items: center;
+}
+
+.oferta-horizontal img {
+    width: 50%;
     height: 200px;
 }
 
-.info-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    border-top-color: var(--toyota-red);
+.boton-centrado {
+    text-align: center;
+    margin-top: 40px;
 }
 
-.info-card h3 {
+.btn-rojo-claro {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #EB0A1E;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    text-transform: uppercase;
+}
+
+/* BENEFICIOS */
+.lista-beneficios {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.item-beneficio {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.item-beneficio .icono {
+    font-size: 1.8rem;
+    background: #fff5f5;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.item-beneficio h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.item-beneficio p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.btn-rojo-solido {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #EB0A1E;
+    color: #fff;
+    padding: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+/* SECCIÓN FINANCIACIÓN */
+.financiacion-banner {
+    padding: 100px 5%;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), #1a1a1a;
+}
+
+.financiacion-contenido {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.calculadora-box {
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 12px;
+    max-width: 500px;
+}
+
+.campos-calculadora {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.campos-calculadora select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.check-list {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.check-list li::before {
+    content: "✓";
+    color: #EB0A1E;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.btn-calcular {
+    width: 100%;
+    background-color: #EB0A1E;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* SECCIÓN CATEGORÍAS */
+.categorias-modelos {
+    padding: 80px 5%;
+}
+
+.titulo-seccion {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+}
+
+.grid-categorias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tarjeta-categoria {
+    text-align: center;
+    background: #f4f4f4;
+    padding: 40px;
+    border-radius: 12px;
+}
+
+.tarjeta-categoria img {
+    width: 100%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-categoria:hover img {
+    transform: scale(1.05);
+}
+
+.tarjeta-categoria h3 {
     font-size: 1.5rem;
-    margin-bottom: 15px;
-    color: var(--toyota-red);
+    margin-bottom: 25px;
 }
 
 /* Footer */
 .main-footer {
-    background-color: var(--dark-bg);
-    color: var(--text-light);
+    background-color: #1a1a1a;
+    color: #ffffff;
     padding-top: 60px;
 }
 
-.footer-container {
+.footer-contenedor {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 5%;
@@ -237,8 +428,8 @@ body {
     margin-bottom: 40px;
 }
 
-.footer-container h3 {
-    color: var(--toyota-red);
+.footer-contenedor h3 {
+    color: #EB0A1E;
     margin-bottom: 20px;
     font-size: 1.2rem;
 }
@@ -258,7 +449,7 @@ body {
 }
 
 .footer-links a {
-    color: var(--text-light);
+    color: #ffffff;
     text-decoration: none;
     opacity: 0.8;
     transition: opacity 0.3s ease, color 0.3s ease;
@@ -267,7 +458,7 @@ body {
 
 .footer-links a:hover {
     opacity: 1;
-    color: var(--toyota-red);
+    color: #EB0A1E;
 }
 
 .footer-map iframe {
@@ -282,20 +473,70 @@ body {
     opacity: 0.6;
 }
 
+/* Banner Promocional */
+.banner-promocional {
+    background-color: #EB0A1E;
+    color: #ffffff;
+    padding: 60px 40px;
+    border-radius: 12px;
+    max-width: 1000px;
+    margin: 60px auto;
+    box-shadow: 0 15px 30px rgba(235, 10, 30, 0.3);
+}
+
+.banner-promocional h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.banner-promocional p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
 /* Responsive adjustments */
-@media (max-width: 768px) {
-    .hero {
+@media (max-width: 1200px) {
+    .hero-texto h1 {
+        font-size: 3.5rem;
+    }
+
+    .contenedor-dual {
         flex-direction: column;
-        text-align: center;
-        padding-top: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-split {
+        flex-direction: column;
+        height: auto;
     }
 
-    .hero-content h1 {
-        font-size: 2.5rem;
+    .hero-texto,
+    .hero-imagen-coche {
+        width: 100%;
+        padding: 60px 5%;
     }
 
-    .hero-image {
-        margin-top: 40px;
+    .coche-destacado {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .grid-ofertas,
+    .grid-categorias {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: span 1;
+    }
+
+    .oferta-horizontal {
+        flex-direction: column;
+    }
+
+    .oferta-horizontal img {
+        width: 100%;
     }
 
     .main-header {
@@ -316,3 +557,11 @@ body {
     }
 }
 
+/* --- RESPONSIVE CONFIGURATIONS --- */
+@media (min-width: 1301px) {
+    .contenedor {
+        max-width: 1300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

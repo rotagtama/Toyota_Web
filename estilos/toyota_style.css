@@ -1,0 +1,259 @@
+/* Estilos específicos para la página corporativa Toyota */
+
+.cuerpo-corporativo {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.timeline-contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 100px 5%;
+    min-height: 120vh;
+    overflow: hidden;
+}
+
+.linea-tiempo {
+    width: 6px;
+    background-color: #ffffff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.linea-superior {
+    top: 0;
+    height: 40%;
+}
+
+.linea-inferior {
+    bottom: 0;
+    height: 40%;
+}
+
+.centro-linea-tiempo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.circulo-central {
+    width: 200px;
+    height: 200px;
+    background-color: #000000;
+    border: 6px solid #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+.circulo-central img {
+    width: 120px;
+    height: auto;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+}
+
+.contenido-linea-tiempo {
+    width: 30%;
+    position: absolute;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contenido-izquierdo {
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: left;
+}
+
+.contenido-derecho {
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: left;
+}
+
+.contenido-linea-tiempo h2 {
+    color: #EB0A1E;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.contenido-linea-tiempo p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #cccccc;
+    margin-bottom: 15px;
+}
+
+/* --- Media Queries Responsivas --- */
+
+/* Fijo >1300px */
+@media (min-width: 1301px) {
+    .timeline-contenedor {
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+}
+
+/* Tablet Horizontal */
+@media (max-width: 1024px) and (orientation: landscape) {
+    .contenido-linea-tiempo {
+        width: 42%;
+    }
+
+    .contenido-linea-tiempo h2 {
+        font-size: 2rem;
+    }
+
+    .circulo-central {
+        width: 160px;
+        height: 160px;
+    }
+
+    .circulo-central img {
+        width: 90px;
+    }
+}
+
+/* Tablet Vertical */
+@media (max-width: 1024px) and (orientation: portrait) {
+    .linea-tiempo {
+        left: 10%;
+    }
+
+    .centro-linea-tiempo {
+        left: 10%;
+        top: 40%;
+    }
+
+    .circulo-central {
+        width: 140px;
+        height: 140px;
+        background-color: #000;
+    }
+
+    .circulo-central img {
+        width: 80px;
+    }
+
+    .contenido-linea-tiempo {
+        width: 80%;
+        position: relative;
+        left: 0;
+        right: 0;
+        top: 0;
+        margin-left: 20%;
+        margin-bottom: 250px;
+        text-align: left;
+        background-color: #000000;
+        z-index: 10;
+        transform: none;
+    }
+
+    .contenido-derecho {
+        margin-top: 0;
+    }
+
+    .linea-superior {
+        height: 100%;
+        bottom: 0;
+    }
+
+    .linea-inferior {
+        display: none;
+    }
+}
+
+/* Teléfono Horizontal */
+@media (max-width: 768px) and (orientation: landscape) {
+    .contenido-linea-tiempo {
+        width: 40%;
+        padding: 15px;
+    }
+
+    .contenido-linea-tiempo h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .contenido-linea-tiempo p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .circulo-central {
+        width: 120px;
+        height: 120px;
+    }
+
+    .circulo-central img {
+        width: 70px;
+    }
+}
+
+/* Teléfono Vertical */
+@media (max-width: 768px) and (orientation: portrait) {
+    .linea-tiempo {
+        left: 50%;
+    }
+
+    .centro-linea-tiempo {
+        left: 50%;
+        top: 50%;
+    }
+
+    .circulo-central {
+        width: 120px;
+        height: 120px;
+    }
+
+    .circulo-central img {
+        width: 70px;
+    }
+
+    .contenido-linea-tiempo {
+        width: 90%;
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 200px;
+        margin-top: 50px;
+        background-color: #000000;
+        z-index: 10;
+        transform: none;
+    }
+
+    .contenido-izquierdo {
+        margin-top: 0;
+    }
+
+    .contenido-derecho {
+        margin-top: 200px;
+        margin-bottom: 50px;
+    }
+
+    .linea-superior {
+        height: 50%;
+    }
+
+    .linea-inferior {
+        display: block;
+        height: 50%;
+    }
+}

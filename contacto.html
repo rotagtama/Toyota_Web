@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
-    <link rel="stylesheet" href="formulario.css">
+    <link rel="stylesheet" href="estilos/formulario_style.css">
     <title>Toyota - Siempre Mejor</title>
 </head>
 
@@ -18,53 +18,53 @@
         </div>
 
         <nav class="lateral">
-            <a class="menu" href="sobre-toyota.html">Sobre Toyota</a>
+            <a class="menu" href="toyota.html">Sobre Toyota</a>
             <a class="menu" href="modelos.html">Modelos</a>
             <a class="menu" href="novedades.html">Novedades</a>
             <a class="menu" href="contacto.html">Contacto</a>
         </nav>
     </header>
 
-    <div class="contact-page-wrapper">
-        <div class="contact-page-header">
+    <div class="envoltura-pagina-contacto">
+        <div class="header-pagina-contacto">
             <h1>Contáctanos</h1>
             <p>Para contactarnos por favor rellena este sencillo formulario y no olvides explicar el motivo antes de
                 darle al botón de "Enviar". En breve nos pondremos en contacto contigo para hacer un oportuno
                 seguimiento de tu caso.</p>
         </div>
 
-        <form class="contact-form-box">
-            <div class="form-box-header">
+        <form class="caja-formulario-contacto">
+            <div class="header-caja-formulario">
                 <h2>Solicita cita</h2>
-                <span class="required-text">* *Campos Obligatorios</span>
+                <span class="texto-requerido">* *Campos Obligatorios</span>
             </div>
 
-            <div class="form-box-body">
-                <div class="form-column">
-                    <div class="form-group-row">
+            <div class="cuerpo-caja-formulario">
+                <div class="columna-formulario">
+                    <div class="fila-grupo-formulario">
                         <label>Nombre <span>*</span></label>
-                        <div class="input-wrapper">
+                        <div class="envoltura-entrada">
                             <input type="text" required>
-                            <span class="input-icon">👤</span>
+                            <span class="icono-entrada">👤</span>
                         </div>
                     </div>
-                    <div class="form-group-row">
+                    <div class="fila-grupo-formulario">
                         <label>Apellido <span>*</span></label>
-                        <div class="input-wrapper">
+                        <div class="envoltura-entrada">
                             <input type="text" required>
-                            <span class="input-icon">👤</span>
+                            <span class="icono-entrada">👤</span>
                         </div>
                     </div>
-                    <div class="form-group-row">
+                    <div class="fila-grupo-formulario">
                         <label>E-Mail <span>*</span></label>
-                        <div class="input-wrapper">
+                        <div class="envoltura-entrada">
                             <input type="email" required>
-                            <span class="input-icon">✉️</span>
+                            <span class="icono-entrada">✉️</span>
                         </div>
                     </div>
-                    <div class="form-group-row">
+                    <div class="fila-grupo-formulario">
                         <label>Localización <span>*</span></label>
-                        <div class="input-wrapper">
+                        <div class="envoltura-entrada">
                             <select required>
                                 <option value="" disabled selected>Selecciona uno</option>
                             </select>
@@ -72,31 +72,31 @@
                     </div>
                 </div>
 
-                <div class="form-column">
-                    <div class="form-group-row">
+                <div class="columna-formulario">
+                    <div class="fila-grupo-formulario">
                         <label>Código Postal <span>*</span></label>
-                        <div class="input-wrapper">
+                        <div class="envoltura-entrada">
                             <input type="text" required>
                         </div>
                     </div>
-                    <div class="form-group-row">
+                    <div class="fila-grupo-formulario">
                         <label>Ciudad <span>*</span></label>
-                        <div class="input-wrapper">
+                        <div class="envoltura-entrada">
                             <input type="text" required>
                         </div>
                     </div>
-                    <div class="form-group-row phone-row">
+                    <div class="fila-grupo-formulario fila-telefono">
                         <label>Teléfono <span>*</span></label>
-                        <div class="input-wrapper">
+                        <div class="envoltura-entrada">
                             <input type="tel" required>
-                            <span class="input-icon">📞</span>
+                            <span class="icono-entrada">📞</span>
                         </div>
-                        <small class="phone-hint">Incluya el prefijo sin el "34" seguido por el número de
+                        <small class="pista-telefono">Incluya el prefijo sin el "34" seguido por el número de
                             teléfono</small>
                     </div>
-                    <div class="form-group-row">
+                    <div class="fila-grupo-formulario">
                         <label>Departamento <span>*</span></label>
-                        <div class="input-wrapper">
+                        <div class="envoltura-entrada">
                             <select required>
                                 <option value="" disabled selected>Selecciona uno</option>
                             </select>
@@ -104,16 +104,16 @@
                     </div>
                 </div>
 
-                <div class="form-group-row full-width-row">
+                <div class="fila-grupo-formulario fila-ancho-completo">
                     <label>Comentarios</label>
-                    <div class="input-wrapper">
+                    <div class="envoltura-entrada">
                         <textarea rows="4"></textarea>
                     </div>
                 </div>
             </div>
 
-            <div class="form-box-footer">
-                <button type="submit" class="btn-submit">Enviar</button>
+            <div class="footer-caja-formulario">
+                <button type="submit" class="btn-enviar">Enviar</button>
             </div>
         </form>
     </div>
@@ -121,7 +121,7 @@
 
     <!-- Footer Section -->
     <footer class="main-footer">
-        <div class="footer-container">
+        <div class="footer-contenedor">
             <div class="footer-contact">
                 <h3>Contacto</h3>
                 <p><strong>Dirección:</strong> Av. de la Institución Libre de Enseñanza, 43, 28037 Madrid, España</p>
@@ -131,7 +131,7 @@
             <div class="footer-links">
                 <h3>Enlaces Rápidos</h3>
                 <ul>
-                    <li><a href="sobre-toyota.html">Sobre Nosotros</a></li>
+                    <li><a href="toyota.html">Sobre Nosotros</a></li>
                     <li><a href="modelos.html">Gama de Vehículos</a></li>
                     <li><a href="novedades.html">Noticias</a></li>
                     <li><a href="contacto.html">Atención al Cliente</a></li>

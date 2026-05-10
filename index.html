@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="estilos/modelos_style.css">
     <title>Toyota - Siempre Mejor</title>
 </head>
 
@@ -18,52 +19,152 @@
         </div>
 
         <nav class="lateral">
-            <a class="menu" href="sobre-toyota.html">Sobre Toyota</a>
+            <a class="menu" href="toyota.html">Sobre Toyota</a>
             <a class="menu" href="modelos.html">Modelos</a>
             <a class="menu" href="novedades.html">Novedades</a>
             <a class="menu" href="contacto.html">Contacto</a>
         </nav>
     </header>
 
-    <div class="aside">
-        <div class="coche">
-            <img src="img/toyotafoto.webp" alt="coche">
-        </div>
-        <div class="carretera">
-            <img src="" alt="">
-        </div>
-    </div>
-
     <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-content">
+        <!-- Sección Hero Split -->
+        <section class="hero-split">
+            <div class="hero-texto">
                 <h1>Let's Go Places</h1>
-                <p>Descubre la innovación, calidad y fiabilidad que nos definen. <br>Liderando el camino hacia el futuro de
-                    la movilidad.</p>
-                <a href="modelos.html" class="btn-primary">Descubrir Modelos</a>
+                <p>Encuentra el vehículo perfecto para ti con nuestro amplio stock de modelos. <br>Servicio técnico
+                    oficial y financiación a medida.</p>
+                <a href="modelos.html" class="btn-primario">Ver Catálogo</a>
+            </div>
+            <div class="hero-imagen-coche">
+                <div class="coche-destacado">
+                    <img src="img/toyotafoto.webp" alt="Toyota Destacado">
+                </div>
+                <div class="estelas-luz"></div>
             </div>
         </section>
 
-        <!-- Information Section -->
-        <section class="corporate-info">
-            <div class="container">
-                <h2>Nuestra Filosofía</h2>
-                <div class="info-grid">
-                    <div class="info-card">
-                        <h3>Calidad</h3>
-                        <p>Nos comprometemos a ofrecer vehículos seguros, fiables y de la más alta calidad para nuestros
-                            clientes en todo el mundo.</p>
+        <!-- Sección Ofertas y Beneficios -->
+        <section class="ofertas-beneficios">
+            <div class="contenedor-dual">
+                <div class="bloque-ofertas">
+                    <h2>Ofertas <span>Destacadas</span></h2>
+                    <div class="grid-ofertas">
+                        <div class="tarjeta-oferta">
+                            <img src="img/toyotafoto.webp" alt="Corolla Hybrid">
+                            <div class="oferta-info">
+                                <h3>Corolla Hybrid</h3>
+                                <p class="precio">Desde € 30,900</p>
+                                <a href="#" class="btn-oferta">Ver Oferta</a>
+                            </div>
+                        </div>
+                        <div class="tarjeta-oferta">
+                            <img src="img/modelos/C-HR.png" alt="Hilux">
+                            <div class="oferta-info">
+                                <h3>Hilux</h3>
+                                <p class="precio">Desde € 38,500</p>
+                                <a href="#" class="btn-oferta">Ver Oferta</a>
+                            </div>
+                        </div>
+                        <div class="tarjeta-oferta full-width">
+                            <div class="oferta-horizontal">
+                                <img src="img/modelos/hybrido.png" alt="Corolla Cross">
+                                <div class="oferta-info">
+                                    <h3>Corolla Cross Hybrid</h3>
+                                    <p class="precio">Desde € 34,500</p>
+                                    <a href="#" class="btn-oferta">Ver Oferta</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="info-card">
-                        <h3>Innovación</h3>
-                        <p>Pioneros en tecnología híbrida y comprometidos con el desarrollo de soluciones de movilidad
-                            sostenible.</p>
+                    <div class="boton-centrado">
+                        <a href="modelos.html" class="btn-rojo-claro">Ver todas las ofertas</a>
                     </div>
-                    <div class="info-card">
-                        <h3>Mejora Continua</h3>
-                        <p>Aplicamos el principio de 'Kaizen' en cada aspecto de nuestra organización para superar
-                            siempre las expectativas.</p>
+                </div>
+
+                <div class="bloque-beneficios">
+                    <h2>Por Qué Elegir <span>Toyota</span></h2>
+                    <div class="lista-beneficios">
+                        <div class="item-beneficio">
+                            <div class="icono"><img src="" alt="icono"> </div>
+                            <div class="texto">
+                                <h3>Tecnología Avanzada</h3>
+                                <p>Innovación líder en el sector automotriz.</p>
+                            </div>
+                        </div>
+                        <div class="item-beneficio">
+                            <div class="icono"><img src="" alt="icono"></div>
+                            <div class="texto">
+                                <h3>Seguridad de Primera</h3>
+                                <p>Sistemas inteligentes de asistencia al conductor.</p>
+                            </div>
+                        </div>
+                        <div class="item-beneficio">
+                            <div class="icono"><img src="" alt="icono"></div>
+                            <div class="texto">
+                                <h3>Eficiencia de Combustible</h3>
+                                <p>Compromiso con la movilidad sostenible.</p>
+                            </div>
+                        </div>
+                        <div class="item-beneficio">
+                            <div class="icono"><img src="" alt="icono"></div>
+                            <div class="texto">
+                                <h3>Servicio Confiable</h3>
+                                <p>Mantenimiento oficial con técnicos expertos.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="toyota.html" class="btn-rojo-solido">Conoce Más</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Financiación -->
+        <section class="financiacion-banner">
+            <div class="financiacion-contenido">
+                <div class="calculadora-box">
+                    <h2>Financiación a <span>Medida</span></h2>
+                    <div class="campos-calculadora">
+                        <select>
+                            <option>Monto del Préstamo</option>
+                        </select>
+                        <select>
+                            <option>Plazo</option>
+                        </select>
+                        <select>
+                            <option>Cuota Estimada</option>
+                        </select>
+                    </div>
+                    <ul class="check-list">
+                        <li>Simula tu préstamo en segundos.</li>
+                        <li>Consulta planes personalizados.</li>
+                    </ul>
+                    <button class="btn-calcular">Calcular mi cuota</button>
+                </div>
+                <div class="imagen-financiacion">
+                    <!-- Se usará fondo en CSS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Categorías -->
+        <section class="categorias-modelos">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Descubre <span>Nuestros Modelos</span></h2>
+                <div class="grid-categorias">
+                    <div class="tarjeta-categoria">
+                        <img src="img/modelos/Corola-frente.png" alt="Sedanes">
+                        <h3>Sedanes</h3>
+                        <a href="modelos.html" class="btn-rojo-solido">Ver Más</a>
+                    </div>
+                    <div class="tarjeta-categoria">
+                        <img src="img/modelos/hybrido-frente.png" alt="SUVs">
+                        <h3>SUVs</h3>
+                        <a href="modelos.html" class="btn-rojo-solido">Ver Más</a>
+                    </div>
+                    <div class="tarjeta-categoria">
+                        <img src="img/modelos/C-HR-frente.png" alt="Camionetas">
+                        <h3>Camionetas</h3>
+                        <a href="modelos.html" class="btn-rojo-solido">Ver Más</a>
                     </div>
                 </div>
             </div>
@@ -72,7 +173,7 @@
 
     <!-- Footer Section -->
     <footer class="main-footer">
-        <div class="footer-container">
+        <div class="footer-contenedor">
             <div class="footer-contact">
                 <h3>Contacto</h3>
                 <p><strong>Dirección:</strong> Av. de la Institución Libre de Enseñanza, 43, 28037 Madrid, España</p>
@@ -82,7 +183,7 @@
             <div class="footer-links">
                 <h3>Enlaces Rápidos</h3>
                 <ul>
-                    <li><a href="sobre-toyota.html">Sobre Nosotros</a></li>
+                    <li><a href="toyota.html">Sobre Nosotros</a></li>
                     <li><a href="modelos.html">Gama de Vehículos</a></li>
                     <li><a href="novedades.html">Noticias</a></li>
                     <li><a href="contacto.html">Atención al Cliente</a></li>

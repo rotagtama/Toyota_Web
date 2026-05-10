@@ -1,0 +1,219 @@
+/* Estilos para Novedades */
+
+.novedades-body {
+    background-color: #f4f4f4;
+}
+
+.news-contenedor {
+    padding: 60px 0;
+    overflow: hidden;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo-noticias {
+    text-align: center;
+    font-size: 3rem;
+    color: #1a1a1a;
+    margin-bottom: 50px;
+    z-index: 10;
+    position: relative;
+}
+
+.envoltura-rueda {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fondo-rueda {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 110%;
+    max-width: 1000px;
+    height: auto;
+    opacity: 0.9;
+    z-index: 1;
+}
+
+.news-cards-contenedor {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.columna-noticias {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 35%;
+}
+
+.noticias-izquierda {
+    align-items: flex-start;
+}
+
+.noticias-derecha {
+    align-items: flex-end;
+}
+
+.tarjeta-noticia {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 350px;
+    position: relative;
+    border: 1px solid #1a1a1a;
+    border-left: 5px solid #1a1a1a;
+}
+
+.tarjeta-noticia:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    background-color: #f9f9f9;
+}
+
+.tarjeta-noticia h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #1a1a1a;
+}
+
+.tarjeta-noticia p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.leer-mas {
+    display: inline-block;
+    color: #EB0A1E;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid #EB0A1E;
+    padding-bottom: 2px;
+    transition: opacity 0.3s ease;
+}
+
+.leer-mas:hover {
+    opacity: 0.7;
+}
+
+
+/* --- Media Queries Responsivas --- */
+
+/* Fijo >1300px */
+@media (min-width: 1301px) {
+    .envoltura-rueda {
+        max-width: 1300px;
+    }
+}
+
+/* Tablet Horizontal */
+@media (max-width: 1024px) and (orientation: landscape) {
+    .envoltura-rueda {
+        height: 600px;
+    }
+    .fondo-rueda {
+        max-width: 800px;
+    }
+    .columna-noticias {
+        width: 40%;
+    }
+    .tarjeta-noticia {
+        padding: 20px;
+    }
+    .tarjeta-noticia h3 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Tablet Vertical */
+@media (max-width: 1024px) and (orientation: portrait) {
+    .news-contenedor {
+        padding-top: 40px;
+    }
+    .envoltura-rueda {
+        height: auto;
+        flex-direction: column;
+    }
+    .fondo-rueda {
+        position: relative;
+        transform: translate(0, 0);
+        top: 0;
+        left: 0;
+        width: 80%;
+        margin: 40px 0;
+        animation: none;
+    }
+    .news-cards-contenedor {
+        flex-direction: column;
+        padding: 0 20px;
+        gap: 40px;
+    }
+    .columna-noticias {
+        width: 100%;
+        align-items: center;
+        gap: 20px;
+    }
+    .tarjeta-noticia {
+        max-width: 500px;
+        border-left: none;
+        border-top: 5px solid #1a1a1a;
+    }
+}
+
+/* Teléfono Horizontal */
+@media (max-width: 768px) and (orientation: landscape) {
+    .envoltura-rueda {
+        height: 500px;
+    }
+    .fondo-rueda {
+        max-width: 600px;
+    }
+    .columna-noticias {
+        width: 45%;
+    }
+    .tarjeta-noticia {
+        padding: 15px;
+    }
+    .tarjeta-noticia h3 {
+        font-size: 1.1rem;
+    }
+    .tarjeta-noticia p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Teléfono Vertical */
+@media (max-width: 768px) and (orientation: portrait) {
+    .titulo-noticias {
+        font-size: 2rem;
+    }
+    .fondo-rueda {
+        width: 100%;
+    }
+    .tarjeta-noticia {
+        padding: 20px;
+    }
+}

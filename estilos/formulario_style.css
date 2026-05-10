@@ -16,9 +16,7 @@ body {
     line-height: 1.6;
 }
 
-/* El encabezado y la navegación se heredan de style.css para mantener la consistencia */
-
-/* Formulario Página de Contacto */
+/* Formulario de Contacto */
 .envoltura-pagina-contacto {
     max-width: 1200px;
     margin: 40px auto;
@@ -51,7 +49,7 @@ body {
 .header-caja-formulario {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Centrado vertical */
+    align-items: center;
     border-bottom: 1px solid #eee;
     padding-bottom: 20px;
     margin-bottom: 30px;
@@ -64,7 +62,7 @@ body {
     color: #1a1a1a;
     display: flex;
     align-items: center;
-    margin-top: 5px; /* Bajamos un poco el título */
+    margin-top: 5px;
 }
 
 .texto-requerido {
@@ -94,7 +92,7 @@ body {
 }
 
 .fila-grupo-formulario label {
-    flex: 0 0 140px; /* Ancho fijo para etiquetas para alineación perfecta */
+    flex: 0 0 140px;
     font-size: 0.95rem;
     color: #444;
     font-weight: 500;
@@ -112,11 +110,12 @@ body {
     min-height: 42px;
 }
 
+/* Aplicado del mismo tamaño a todos los inputs */
 .envoltura-entrada input,
 .envoltura-entrada select,
 .envoltura-entrada textarea {
     width: 100%;
-    height: 42px; /* Tamaño estandarizado */
+    height: 42px;
     padding: 0 12px;
     border: 1px solid #ddd;
     outline: none;
@@ -133,6 +132,7 @@ body {
     min-height: 100px;
 }
 
+/* Cambio de color cuando se hace click para escribir */
 .envoltura-entrada input:focus,
 .envoltura-entrada select:focus,
 .envoltura-entrada textarea:focus {
@@ -141,6 +141,7 @@ body {
 }
 
 .icono-entrada {
+    /* Ajuste de la posicion de los iconos */
     position: absolute;
     right: 5px;
     top: 50%;
@@ -161,6 +162,7 @@ body {
     opacity: 0.7;
 }
 
+/* Separacion entre los campos del formulario */
 .envoltura-entrada input[type="text"],
 .envoltura-entrada input[type="email"],
 .envoltura-entrada input[type="tel"] {
@@ -169,11 +171,13 @@ body {
 
 .fila-telefono {
     position: relative;
+    /* el wrap hace que el campo del telefono se adapte a el campo superior, quedando del mismo tamaño */
+    /* lo puse pq el muy cabron no se adaptaba */
     flex-wrap: wrap;
 }
 
 .pista-telefono {
-    margin-left: 140px; /* Debe coincidir con el flex-basis del label */
+    margin-left: 140px;
     font-size: 0.75rem;
     color: #999;
     margin-top: 5px;
@@ -220,70 +224,11 @@ body {
     background-color: #cc0000;
 }
 
-/* Footer */
-.main-footer {
-    background-color: #1a1a1a;
-    color: #ffffff;
-    padding-top: 60px;
-}
+/* --- Ajustes responsive --- */
+/* Al usar medidas rem y porcentajes se evita el ajuste dependiendo de la disposicion 
+vertical u horizontal */
 
-.footer-contenedor {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 5%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    margin-bottom: 40px;
-}
-
-.footer-contenedor h3 {
-    color: #EB0A1E;
-    margin-bottom: 20px;
-    font-size: 1.2rem;
-}
-
-.footer-contact p {
-    margin-bottom: 10px;
-    font-size: 0.9rem;
-    opacity: 0.8;
-}
-
-.footer-links ul {
-    list-style: none;
-}
-
-.footer-links li {
-    margin-bottom: 10px;
-}
-
-.footer-links a {
-    color: #ffffff;
-    text-decoration: none;
-    opacity: 0.8;
-    transition: opacity 0.3s ease, color 0.3s ease;
-    font-size: 0.9rem;
-}
-
-.footer-links a:hover {
-    opacity: 1;
-    color: #EB0A1E;
-}
-
-.footer-map iframe {
-    border-radius: 4px;
-}
-
-.footer-bottom {
-    background-color: #111111;
-    text-align: center;
-    padding: 20px;
-    font-size: 0.8rem;
-    opacity: 0.6;
-}
-
-/* --- Media Queries Responsivas --- */
-
+/* El tamaño de las tablets y pantallas mas pequeñas se ajusta automaticamente */
 @media (max-width: 1024px) {
     .envoltura-pagina-contacto {
         margin: 20px auto;
@@ -298,6 +243,7 @@ body {
     }
 }
 
+/* Para moviles */
 @media (max-width: 768px) {
     .header-pagina-contacto h1 {
         font-size: 1.6rem;

@@ -680,48 +680,17 @@ h2 span {
         flex-direction: column;
         height: auto;
         padding: 10px 0;
-        position: relative;
     }
 
     .lateral {
         margin-top: 10px;
-        flex-direction: column;
-        width: 100%;
-        height: auto;
+        flex-wrap: wrap;
+        justify-content: center;
         padding-right: 0;
     }
 
-    .nav-item {
-        width: 100%;
-        text-align: center;
-        flex-direction: column;
-    }
-
     .menu {
-        display: block;
-        width: 100%;
-        padding: 15px 0;
-        border-top: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .desplegable {
-        position: static; /* Stack vertically */
-        display: none;
-        width: 100%;
-        background-color: #222;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        box-shadow: none;
-    }
-
-    .nav-item:hover .desplegable {
-        display: block;
-    }
-
-    .desplegable a {
-        padding: 10px 20px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        padding: 10px;
     }
 }
 

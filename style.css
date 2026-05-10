@@ -694,6 +694,39 @@ h2 span {
     }
 }
 
+/* Ajustes para dispositivos en horizontal (Landscape) con poca altura */
+@media (orientation: landscape) and (max-height: 600px) {
+    .hero-split {
+        height: auto;
+        padding: 60px 0;
+    }
+
+    .hero-texto h1 {
+        font-size: 3rem;
+    }
+
+    .hero-texto {
+        padding: 20px 5%;
+    }
+
+    .ofertas-beneficios {
+        padding: 40px 0;
+    }
+
+    .bloque-ofertas,
+    .bloque-beneficios {
+        padding: 30px 5%;
+    }
+
+    .financiacion-banner {
+        padding: 40px 5%;
+    }
+
+    .categorias-modelos {
+        padding: 40px 5%;
+    }
+}
+
 /* Responsive de pantallas grandes */
 @media (min-width: 1301px) {
     .contenedor {

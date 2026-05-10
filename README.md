@@ -20,16 +20,24 @@ https://rotagtama.github.io/Toyota_Web
 ## Estructura del proyecto
 Toyota_Web/
 │
-├── index.html # Pagina de inicio
+├── index.html # Pagina de inicio /n
 ├── modelos.html # Catalogo de vehiculos
 ├── novedades.html # Noticias y lanzamientos
 ├── contacto.html # Formulario de contacto
 ├── toyota.html # Pagina institucional (historia/marca)
-├── style.css # Hoja de estilos principal
+├── style.css # Hoja de estilos principal (global)
 │
-├── estilos/ # Estilos adicionales (si aplica)
+├── estilos/
+│ ├── estilos-modelos.css # Estilos especificos para la pagina de modelos
+│ ├── estilos-contacto.css # Estilos especificos para el formulario de contacto
+│ └── estilos-novedades.css # Estilos especificos para la seccion de novedades
+│
 ├── font/ # Fuentes tipograficas personalizadas
-└── img/ # Imagenes del sitio (version v2)
+│ └── toyota-font.woff2
+│
+└── img/ # Imagenes del sitio
+├── └── modelos #imagenes de los autos
+├── └── iconos-formulario #iconos para los formularios de la web
 
 ## Tecnologias utilizadas
 

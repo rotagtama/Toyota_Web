@@ -11,13 +11,7 @@ Propuesta de rediseño del sitio web de Toyota, desarrollada como proyecto de ma
 (Puedes anadir aqui una captura de pantalla de tu sitio)
 
 ## Demo
-
-Puedes ver el sitio en funcionamiento aqui:  
-https://rotagtama.github.io/Toyota_Web
-
-(Activa GitHub Pages en los ajustes de tu repositorio para que este enlace funcione)
-
-## Estructura del proyecto
+```
 Toyota_Web/
 │
 ├── index.html
@@ -37,10 +31,8 @@ Toyota_Web/
 │
 └── img/
     ├── modelos/
-    │   └── (imagenes de los autos)
     └── iconos-formulario/
-        └── (iconos para los formularios de la web)
-
+```
 ## Tecnologias utilizadas
 
 - HTML5 - Estructura semantica

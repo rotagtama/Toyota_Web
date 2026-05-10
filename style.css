@@ -71,7 +71,7 @@ body {
 /* SECCIÓN HERO SPLIT */
 .hero-split {
     display: flex;
-    height: 80vh;
+    height: 100vh;
     min-height: 600px;
     background-color: #ffffff;
     overflow: hidden;
@@ -154,27 +154,37 @@ body {
 
 /* SECCIÓN OFERTAS Y BENEFICIOS */
 .ofertas-beneficios {
-    padding: 80px 5%;
-    background-color: #f9f9f9;
+    padding: 0;
+    background: linear-gradient(to right, #f9f9f9 65%, #000 65%);
 }
 
 .contenedor-dual {
     display: flex;
-    gap: 60px;
-    max-width: 1400px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0;
 }
 
 .bloque-ofertas {
-    flex: 2;
+    width: 65%;
+    padding: 80px 5% 80px 8%;
 }
 
 .bloque-beneficios {
-    flex: 1;
+    width: 35%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.beneficios-caja {
     background-color: #ffffff;
     padding: 40px;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 450px;
 }
 
 h2 {
@@ -517,9 +527,39 @@ h2 span {
         padding: 60px 5%;
     }
 
+    .hero-imagen-coche {
+        background-color: #f4f4f4; /* Fondo suave en lugar de negro */
+    }
+
     .coche-destacado {
         width: 100%;
         margin-left: 0;
+        margin-top: 0;
+    }
+
+    .coche-destacado img {
+        transform: perspective(1000px) rotateY(0deg) scale(1);
+    }
+
+    .ofertas-beneficios {
+        background: #f9f9f9; /* Quitar gradiente de split */
+        padding: 40px 0;
+    }
+
+    .bloque-ofertas, .bloque-beneficios {
+        width: 100%;
+        padding: 40px 5%;
+    }
+
+    .bloque-beneficios {
+        background-color: #f9f9f9;
+    }
+
+    .beneficios-caja {
+        width: 100%;
+        max-width: 100%;
+        box-shadow: none;
+        border: 1px solid #eee;
     }
 
     .grid-ofertas,

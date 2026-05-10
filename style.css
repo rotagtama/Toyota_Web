@@ -1,3 +1,4 @@
+/* Este style se usa para dar formato al header, nav y footer de todas las paginas del proyecto */
 * {
     margin: 0px;
     padding: 0px;
@@ -24,8 +25,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* Posicion Sticky para que se mantenga fijo al hacer scroll */
     position: sticky;
     top: 0;
+    /* z-index para no solaparlo con otros elementos */
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
@@ -34,19 +37,22 @@ body {
     display: flex;
     align-items: center;
     height: 100%;
-    padding: 0 20px;
+    padding: 0 50px;
 }
 
 .logo img {
     height: 50px;
     width: auto;
+    /* Transición para que el hover sea mas suave */
     transition: transform 0.3s ease;
 }
 
+/* Incrementa un poco el tamaño al hacer hover */
 .logo img:hover {
     transform: scale(1.05);
 }
 
+/* Nav de los enlaces */
 .lateral {
     display: flex;
     height: 100%;
@@ -61,7 +67,8 @@ body {
     align-items: center;
 }
 
-.dropdown {
+/* Posicionamiento de los items del desplegable */
+.desplegable {
     position: absolute;
     top: 100%;
     left: 20px;
@@ -78,22 +85,25 @@ body {
     z-index: 2000;
 }
 
-.nav-item:hover .dropdown {
+/* Al hacer hover que estos items se muestren */
+.nav-item:hover .desplegable {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
 }
 
-.dropdown a {
+.desplegable a {
     color: #ffffff;
     padding: 12px 20px;
     text-decoration: none;
     font-size: 14px;
+    /* Animacion que se activa al hacer hover que cambia
+     el color de la fuente y la mueve un poco a la izquierda */
     transition: background-color 0.2s ease, padding-left 0.2s ease;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.dropdown a:hover {
+.desplegable a:hover {
     background-color: #2a2a2a;
     color: #EB0A1E;
     padding-left: 25px;
@@ -113,8 +123,9 @@ body {
 }
 
 /* Sección Portada */
-/* SECCIÓN HERO SPLIT */
+/* Raquel nos enseño que esta parte se le llama hero*/
 .hero-split {
+    /* le pusimos hero split porque esta es la parte del corte */
     display: flex;
     height: 100vh;
     min-height: 600px;
@@ -122,18 +133,19 @@ body {
     overflow: hidden;
 }
 
+/* Seccion del texto */
 .hero-texto {
     width: 65%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 0 8%;
-    padding-bottom: 100px;
-    /* Al empujar desde abajo, el contenido sube */
+    padding-bottom: 200px;
 }
 
 .hero-texto h1 {
-    font-size: 5rem;
+    /* Uso de medidas rem para ayudar con el responsive */
+    font-size: 6rem;
     font-weight: 800;
     line-height: 1;
     color: #1a1a1a;
@@ -155,12 +167,14 @@ body {
     text-decoration: none;
     font-weight: 600;
     border-radius: 4px;
+    /* Transicion para que se vea mas suave al hover */
     transition: background-color 0.3s ease, transform 0.2s ease;
     width: fit-content;
 }
 
 .btn-primario:hover {
     background-color: #cc0000;
+    /* Subirlo un poquito */
     transform: translateY(-2px);
 }
 
@@ -178,12 +192,12 @@ body {
     width: 130%;
     margin-left: -120%;
     margin-top: 10%;
-    /* Bajamos el coche para que las ruedas toquen las estelas */
     filter: drop-shadow(-15px 15px 30px rgba(0, 0, 0, 0.5));
 }
 
 .coche-destacado img {
     width: 100%;
+    /* Juego de las perspectivas para que se vea asi como 3D */
     transform: perspective(2000px) rotateY(-25deg) rotateX(2deg);
 }
 
@@ -198,7 +212,7 @@ body {
     z-index: 1;
 }
 
-/* SECCIÓN OFERTAS Y BENEFICIOS */
+/* Seccion de ofertas y beneficios de la marca */
 .ofertas-beneficios {
     padding: 0;
     background: linear-gradient(to right, #f9f9f9 65%, #000 65%);
@@ -458,18 +472,22 @@ h2 span {
 
 .tarjeta-categoria img {
     width: 100%;
-    height: 180px; /* Altura fija para alineación perfecta */
-    object-fit: contain; /* Asegura que no se deformen */
+    height: 180px;
+    /* Altura fija para alineación perfecta */
+    object-fit: contain;
+    /* Asegura que no se deformen */
     margin-bottom: 20px;
     transition: transform 0.3s ease;
 }
 
 .tarjeta-categoria img.img-grande {
-    transform: scale(1.15) translateY(12px); /* Bajamos la imagen sin afectar al flujo del texto */
+    transform: scale(1.15) translateY(12px);
+    /* Bajamos la imagen sin afectar al flujo del texto */
 }
 
 .tarjeta-categoria:hover img {
-    transform: scale(1.2); /* Efecto hover un poco más pronunciado */
+    transform: scale(1.2);
+    /* Efecto hover un poco más pronunciado */
 }
 
 .tarjeta-categoria:hover img.img-grande {
